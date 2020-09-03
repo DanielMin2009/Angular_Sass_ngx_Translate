@@ -1,0 +1,34 @@
+// Mixins
+@mixin transition {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+@mixin commonText {
+    font: {
+        font-family: "Gotham", Arial, Helvetica, sans-serif;
+        size: 0.86rem;
+        letter-spacing: 0.05rem;
+    }
+}
+@mixin commonButton {
+    color: white;
+    font: {
+        weight: 500;
+    }
+    // border: 1px solid $orange;
+    padding: 0.6rem 2.2rem 0.6rem 1.1rem;
+    background-color: $orange;
+    border-radius: 0;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-right: -1px;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0 0 0 1px $orange;
+    -moz-box-shadow: inset 0 0 0 1px $orange;
+    box-shadow: inset 0 0 0 1px $orange;
+    box-shadow: inset 0 0 0 0 $ecru;
+    @include transition;
+}
