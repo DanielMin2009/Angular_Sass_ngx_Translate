@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@import "../../../../styles.scss";
 
 // Layout
 .container {
@@ -10,10 +10,10 @@
         display: grid;
         grid-template-areas:
             "nav nav"
-            "main-header aside-data"
-            "main-action aside-status";
+            "aside-data main-header "
+            "aside-status main-action";
         grid-template-rows: 6vh 20vh 30vh;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 2fr;
         // Nav
         .navbar {
             grid-area: nav;
@@ -154,12 +154,12 @@
 
                     figure {
                         background-color: $sky-blue;
-                        width: 84px;
                         height: 10vh;
                         @include transition;
                         img {
-                            margin: 10% 25% 0 25%;
-                            width: 50%;
+                            margin-top: 1vh;
+                            align-items: center;
+                            width: 100%;
                         }
                         figcaption {
                             color: white;
@@ -228,10 +228,7 @@
                         weight: 500;
                     }
                     figure {
-                        background-color: white;
-                        width: 25px;
-                        height: 25px;
-                        border-radius: 50%;
+                        width: 90%;
                     }
                 }
             }
@@ -245,7 +242,7 @@
                 justify-content: space-between;
                 &__header {
                     display: grid;
-                    grid-template-columns: auto 30px;
+                    grid-template-columns: 75% 25%;
                     grid-column-gap: 1%;
                     p {
                         @include commonText;
@@ -255,24 +252,13 @@
                             weight: 500;
                         }
                     }
-                    div {
-                        @include square;
-                        background-color: darken($dark-blue, 5%);
-                        text-align: center;
-                        font: {
-                            size: 0.7rem;
-                        }
-                        line-height: 40px;
-                        color: white;
-                        float: right;
-                    }
                 }
                 &__main {
                     padding: $box-padding;
                     background-color: white;
 
                     display: grid;
-                    grid-template-columns: 5fr 2fr 1fr;
+                    grid-template-columns: 4fr 2fr 1fr;
                     grid-column-gap: $box-padding / 2;
                     @include commonText;
                     line-height: 125%;
@@ -286,51 +272,19 @@
                         }
                     }
                     figure {
-                        background-color: $orange;
-                        @include square;
+                        width: 100%;
                     }
                 }
             }
         }
     }
 }
-.footer {
+footer {
     max-width: 992px;
     margin: auto;
-    @include commonText;
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: stretch;
-	align-content: stretch;
     &__bank-panell {
-        ul {
-            padding-inline-start: 0;
-            margin: $box-padding * 0.75 $box-padding;
-            li {
-                display: inline;
-                a {
-                    color: $dark;
-                    padding-right: $box-padding;
-                    @include transition;
-                    &:hover {
-                        color: $orange;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-        p {
-            padding-inline-end: 0;
-            margin: $box-padding * 0.75 $box-padding;
-            color: $dark-blue;
-            .vertical-separator {
-                margin: 0 $box-padding / 3;
-            }
-            span {
-                color: $dark;
-            }
+        .navbar-nav {
+            display: inline-block;
         }
     }
 }

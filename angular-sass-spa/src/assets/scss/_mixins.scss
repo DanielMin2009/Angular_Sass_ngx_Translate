@@ -32,3 +32,8 @@
     box-shadow: inset 0 0 0 0 $ecru;
     @include transition;
 }
+
+@mixin square {
+    width: 30px;
+    height: 30px;
+}
