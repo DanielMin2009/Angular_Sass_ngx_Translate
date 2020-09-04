@@ -2,7 +2,7 @@
 
 // Layout
 .content {
-    &__bank-panell {   
+    &__bank-panell {
         // Desktop
         @media (min-width: 992px) {
             grid-template-areas:
@@ -17,10 +17,9 @@
     .navbar {
         @media (min-width: 768px) {
             direction: rtl;
-        }        
-        #navbar {           
+        }
+        #navbar {
             ul {
-                
                 li {
                     &:last-child {
                         @media (min-width: 768px) {
@@ -33,15 +32,13 @@
         }
     }
     // Main
-    .main {   
+    .main {
         &__header {
             direction: rtl;
-            
+
             // Desktop
             @media (min-width: 992px) {
-                
                 margin-left: $box-padding;
-                
             }
 
             &__logo {
@@ -50,7 +47,7 @@
                     margin-left: $box-padding;
                 }
             }
-            
+
             &__searchbar {
                 direction: ltr;
                 // Desktop
@@ -67,7 +64,7 @@
             // Desktop
             @media (min-width: 992px) {
                 margin-left: $box-padding;
-            }     
+            }
             .breadcrumb {
                 @include commonText;
                 float: right;
@@ -78,7 +75,6 @@
                         }
                     }
                 }
-                
             }
             hr {
                 margin-top: 40px;
@@ -89,19 +85,29 @@
     .aside {
         &__group {
             &__userdata {
-                text-align: right;            
+                text-align: right;
+
                 div {
                     direction: rtl;
-                    grid-template-columns: 8% 38% 8% 38%;
-                    grid-column-gap: 2%;
+
+                    // Large Mobile
+                    @media (min-width: 576px) and (max-width: 768px) {
+                        grid-template-columns: 15% 85%;
+                        grid-template-rows: 1fr 1fr;
+                    }
+                    // Desktop
+                    @media (min-width: 992px) {
+                        grid-template-columns: 8% 38% 8% 38%;
+                        grid-column-gap: 2%;
+                    }
                 }
-            }       
+            }
             &__userstatus {
-                direction: rtl;    
+                direction: rtl;
                 &__header {
                     p {
                         text-align: right;
-                        direction: ltr;    
+                        direction: ltr;
                     }
                     div {
                         float: right;
