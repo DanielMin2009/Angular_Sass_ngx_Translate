@@ -1,0 +1,118 @@
+@import "../../../styles.scss";
+
+// Layout
+.content {
+    &__bank-panell {   
+        // Desktop
+        @media (min-width: 992px) {
+            grid-template-areas:
+                "nav nav"
+                "aside-data main-header"
+                "aside-status main-action";
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+    // Nav
+    .navbar {
+        @media (min-width: 768px) {
+            direction: rtl;
+        }        
+        #navbar {           
+            ul {
+                
+                li {
+                    &:last-child {
+                        @media (min-width: 768px) {
+                            margin-left: 40px;
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Main
+    .main {   
+        &__header {
+            direction: rtl;
+            
+            // Desktop
+            @media (min-width: 992px) {
+                
+                margin-left: $box-padding;
+                
+            }
+
+            &__logo {
+                figure {
+                    float: left;
+                    margin-left: $box-padding;
+                }
+            }
+            
+            &__searchbar {
+                direction: ltr;
+                // Desktop
+                @media (min-width: 992px) {
+                    margin-left: 0;
+                    margin-right: $box-padding / 4;
+                }
+            }
+        }
+        &__actionbar {
+            &__nav {
+                direction: rtl;
+            }
+            // Desktop
+            @media (min-width: 992px) {
+                margin-left: $box-padding;
+            }     
+            .breadcrumb {
+                @include commonText;
+                float: right;
+                ol {
+                    li {
+                        a {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                
+            }
+            hr {
+                margin-top: 40px;
+            }
+        }
+    }
+    // Aside
+    .aside {
+        &__group {
+            &__userdata {
+                text-align: right;            
+                div {
+                    direction: rtl;
+                    grid-template-columns: 8% 38% 8% 38%;
+                    grid-column-gap: 2%;
+                }
+            }       
+            &__userstatus {
+                direction: rtl;    
+                &__header {
+                    p {
+                        text-align: right;
+                        direction: ltr;    
+                    }
+                    div {
+                        float: right;
+                    }
+                }
+                &__main {
+                    p {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
