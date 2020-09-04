@@ -1,4 +1,4 @@
-<section class="container container__bank-panell animated fadeIn">
+<section class="content content__bank-panell animated fadeIn">
     <nav class="navbar navbar-expand-md">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
         </div>
     </main>
     <main class="main main__actionbar">
-        <nav>
+        <nav class="main__actionbar__nav">
             <a routerLinkActive="active" routerLink="/">
                 <figure class="active">
                     <img src="./assets/img/icons/i-nav1.svg" alt="home" width="100%" height="auto" />
@@ -91,36 +91,38 @@
         </nav>
         <hr>
     </main>
-    <aside class="aside aside__userdata">
-        <h1>Hadi Farûq</h1>
-        <p><span>Last logon:</span> 10/02/2020 7:21:15 AM</p>
-        <div>
-            <figure>
-                <img src="./assets/img/icons/b-cr-img1.svg" alt="home" width="100%" height="auto" />
-            </figure>
-            <p>My Al Mubasher</p>
-            <figure>
-                <img src="./assets/img/icons/b-cr-img2.svg" alt="home" width="100%" height="auto" />
-            </figure>
-            <p>My Mailbox<br><small>3 unread emails</small></p>
-        </div>
-    </aside>
-    <aside class="aside aside__userstatus">
+    <aside class="aside aside__group">
+        <aside class="aside aside__group__userdata">
+            <h1>Hadi Farûq</h1>
+            <p><span>Last logon:</span> 10/02/2020 7:21:15 AM</p>
+            <div>
+                <figure>
+                    <img src="./assets/img/icons/b-cr-img1.svg" alt="home" width="100%" height="auto" />
+                </figure>
+                <p>My Al Mubasher</p>
+                <figure>
+                    <img src="./assets/img/icons/b-cr-img2.svg" alt="home" width="100%" height="auto" />
+                </figure>
+                <p>My Mailbox<br><small>3 unread emails</small></p>
+            </div>
+        </aside>
+        <aside class="aside aside__group__userstatus">
 
-        <div class="aside__userstatus__header">
-            <p>Did you know...?</p>
-            <div><i class="fa fa-minus"></i></div>
-        </div>
+            <div class="aside__group__userstatus__header">
+                <p>Did you know...?</p>
+                <div><i class="fa fa-minus"></i></div>
+            </div>
 
-        <div class="aside__userstatus__main">
-            <p>
-                You can customize 'My status' by rerranging the modules.
-            </p>
-            <span>Watch demo</span>
-            <figure>
-                <img src="./assets/img/icons/i-w-watch.svg" alt="home" width="100%" height="auto" />
-            </figure>
-        </div>
+            <div class="aside__group__userstatus__main">
+                <p>
+                    You can customize 'My status' by rerranging the modules.
+                </p>
+                <span>Watch demo</span>
+                <figure>
+                    <img src="./assets/img/icons/i-w-watch.svg" alt="home" width="100%" height="auto" />
+                </figure>
+            </div>
+        </aside>
     </aside>
 </section>
 <footer class="footer footer__bank-panell">
